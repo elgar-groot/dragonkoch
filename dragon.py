@@ -40,8 +40,8 @@ def dragon(lines, order):
 
 
 
-fig = plt.gcf()
-ax = plt.axes()
+fig, ax = plt.subplots()
+plt.subplots_adjust(bottom=0.15)
 
 lc = mc.LineCollection(start_line)
 ax.add_collection(lc)
@@ -62,6 +62,7 @@ def draw(val):
 	lc = mc.LineCollection(lines)
 	del ax.collections[0]
 	ax.add_collection(lc)
+	plt.subplots_adjust(bottom=0.15)
 	fig.canvas.draw_idle()
 
 
